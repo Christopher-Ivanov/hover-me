@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"/>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('img').hover(function(){ 
+			magicHover($(this)); 
+		});
+	});
+	function magicHover(img){ 
+		var $source = img.attr('src'); 
+		var $destination = img.attr('data-hover'); 
+		img.attr({'src': $destination, 'data-hover': $source}); 
+
+		
+	}
+	</script>
+</head>
+<body>
+	<img src="http://placehold.it/300x300" alt="" data-hover="https://i.imgur.com/u042T1j.png">
+	<img src="http://placehold.it/300x300" alt="" data-hover="https://i.imgur.com/ZNEVOTG.png">
+	<img src="http://placehold.it/300x300" alt="" data-hover="https://i.imgur.com/GvnXUKo.png">
+</body>
+</html>
